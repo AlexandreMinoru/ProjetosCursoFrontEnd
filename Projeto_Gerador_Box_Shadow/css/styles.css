@@ -1,0 +1,151 @@
+/*General*/
+*{
+    font-family: "Verdana";
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding-bottom: 500px;
+
+}
+
+h2{
+    margin-bottom: 1.6rem;
+    text-align: center;
+    color: #333;
+}
+
+#boxShadowGenerator{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#controlsContainer,
+#preview{
+    flex: 1;
+    padding: 2rem;
+}
+
+/*Controls*/
+
+.formControl{
+    display: flex;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px dashed #ccc;
+}
+
+.formControl label{
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.rangeInput{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.rangeInput input[type="range"]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 24px;
+    background-color: #d3d3d3;
+    outline: none;
+}
+
+.rangeInput input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: #e9d60a;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+#referenceInput{
+    display: flex;
+    align-items: center;
+}
+
+#referenceInput p{
+    margin-left: 4px;
+}
+
+#referenceInput input[type="text"]{
+    height: 30px;
+    width: 30px;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+#colorValue, #boxColorValue{
+    min-width: 100px;
+}
+
+#inset{
+    align-self: start;
+    height: 20px;
+    width: 20px;
+}
+
+/*Preview*/
+
+#box{
+    width: 100%;
+    height: 300px;
+    background-color: #e9d60a;
+}
+
+/*Generation area*/
+
+#generatedRule{
+    text-align: center;
+}
+#generatedRule p{
+    margin-bottom: .5rem;
+}
+
+#rulesArea{
+    background-color: #d3d3d3;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid #e9d60a;
+    padding: 1rem;
+    transition: .4s;
+    cursor: pointer;
+}
+
+#rulesArea:hover{
+    background-color: #dfdfdf;
+}
+
+#copyInstructions{
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/*Responsivity*/
+
+@media(max-width: 425px) {
+    #boxShadowGenerator{
+        flex-direction: column;
+    }
+    #controlsContainer, #preview{
+        padding: 1rem 2rem;
+    }
+    #box{
+        width: 60%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    #generatedRule{
+        margin-top: 2rem;
+    }
+}
